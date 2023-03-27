@@ -2,10 +2,12 @@ package loja_coma_bem;
 
 public class index {
 	public static void main(String[] args) {
-        int xpto; // declaração de uma variável chamada ‘xpto’
+        int xpto = 0; // declaração de uma variável chamada ‘xpto’
         /*como o valor não foi declarado, por padrão é zero.
         Veremos os tipos de dados a seguir, siga adiante.
         */
+        System.out.println(xpto); // presisou ser inicializada.
+        
 		int decimal = 10;
 
 		//declara a variável do tipo int com valor igual a 10
