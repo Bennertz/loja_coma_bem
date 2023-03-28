@@ -1,5 +1,9 @@
 package loja_coma_bem;
 
+import static java.lang.Math.*;
+import java.util.Date;
+import java.text.DecimalFormat;
+
 public class operacoes {
     public static void SomaSubtraiMultiplicaDivide() {
         int primeiroNumero = 10;
@@ -127,7 +131,75 @@ public class operacoes {
         System.out.println(primeiroNumero + segundoNumero);
         System.out.println("------------------------------------------------------");
     }
-        
+
+    public static int calcSomaComRet() {
+        int primeiroNumero = 10;
+        int segundoNumero = 20;
+        return primeiroNumero + segundoNumero;
+    }
+
+    public static int calcularSomaRetornoEParamentro(int primeiroNumero, int segundoNumero) {
+        return primeiroNumero + segundoNumero;
+    }
+
+    public static void maiorNumero() {
+        System.out.println("O maior número é: " + Math.max(10, 20));
+        System.out.println("------------------------------------------------------");
+    }
+
+    public static void manipulacaoString() {
+        String texto = "Você teve uma ótima idéia.";
+        texto = texto.replace("ótima", "excelente");
+        System.out.println(texto);
+        System.out.println("------------------------------------------------------");
+    }
+
+    public static void manipulacaoString_2() {
+        String texto = " Esse texto aparecerá sem espaços no início ou no fim. ";
+        System.out.println(texto.trim());
+        System.out.println("------------------------------------------------------");
+    }
+
+    public static void manipulacaoString_3() {
+        String texto = "Senai";
+        System.out.println(texto.length());
+        System.out.println("------------------------------------------------------");
+    }
+
+    public static void manipulacaoString_4() {
+        String texto = "João Carlos";
+        System.out.println(texto.toUpperCase());
+        System.out.println(texto.toLowerCase());
+        System.out.println("------------------------------------------------------");
+    }
+
+    public static void datas() {
+        Date data = new Date();
+        System.out.println(data);
+        System.out.println(data.getDate());
+        System.out.println(data.getMonth());
+        System.out.println(data.getYear());
+        System.out.println(data.getHours());
+        System.out.println(data.getMinutes());
+        System.out.println(data.getSeconds());
+        System.out.println("------------------------------------------------------");
+    }
+
+    public static void FormatacaoNumeros() {
+        String numero = "10";
+        double numeroDouble = Double.parseDouble(numero);
+        int numeroInteiro = Integer.parseInt(numero);
+        System.out.println(numeroDouble);
+        System.out.println(numeroInteiro);
+        System.out.println("------------------------------------------------------");
+    }
+    
+    public static void FormatacaoNumeros2() {
+        double numero = 10000.0;
+        DecimalFormat df = new DecimalFormat("#,###.00");
+        System.out.println(df.format(numero));
+        System.out.println("------------------------------------------------------");
+    }
     public static void main(String[] args) {
         SomaSubtraiMultiplicaDivide();
 
@@ -149,5 +221,30 @@ public class operacoes {
 
         SomarNumeros();
 
+        System.out.println(calcSomaComRet());
+
+        System.out.println(calcularSomaRetornoEParamentro(10, 20));
+
+        maiorNumero();
+
+        System.out.println("A raiz quadrada de 16 é: " + sqrt(16));
+
+        System.out.println("O número 3 elevado a potência de 2 é: " + pow(3, 2));
+
+        System.out.println("O valor de PI é: " + PI);
+
+        manipulacaoString();
+
+        manipulacaoString_2();
+
+        manipulacaoString_3();
+
+        manipulacaoString_4();
+
+        datas();
+
+        FormatacaoNumeros();
+
+        FormatacaoNumeros2();
     }    
 }
